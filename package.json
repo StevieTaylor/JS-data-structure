@@ -1,7 +1,7 @@
 {
-  "name": "js-template",
+  "name": "js-data-structure",
   "version": "0.0.0",
-  "description": "javascript template",
+  "description": "javascript data structure",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.dev.js",
@@ -9,17 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/StevieTaylor/JS-template.git"
+    "url": "git+https://github.com/StevieTaylor/JS-data-structure.git"
   },
   "keywords": [
-    "javascript"
+    "javascript",
+    "data structure"
   ],
   "author": "Stevie Taylor",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/StevieTaylor/JS-template/issues"
+    "url": "https://github.com/StevieTaylor/JS-data-structure/issues"
   },
-  "homepage": "https://github.com/StevieTaylor/JS-template#readme",
+  "homepage": "https://github.com/StevieTaylor/JS-data-structure#readme",
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "cross-env": "^7.0.3",

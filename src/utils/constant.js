@@ -1,25 +1,20 @@
 /*
  * @Author: Stevie
  * @Date: 2021-06-15 15:11:56
- * @LastEditTime: 2021-07-08 17:17:39
+ * @LastEditTime: 2021-07-08 19:35:20
  * @LastEditors: Stevie
  * @Description: 章节和模块配置
  */
-export const title = 'JS-template'
+export const title = 'JS Data Structure'
 
 export const chapterMap = {
-  // ~ 章节的文件夹名
-  example: {
-    // ~ 章节id
-    chapterId: 'example',
-    // ~ 章节名
-    name: '一、示例',
-    // ~ 章节内的模块
+  stack: {
+    chapterId: 'stack',
+    name: '一、栈',
     modules: {
-      moduleA: '模块A',
-      moduleB: '模块B',
+      implement: '栈的实现',
+      useStack: '栈的使用',
     },
-    // ~ 是否展示
     display: true,
   },
 }

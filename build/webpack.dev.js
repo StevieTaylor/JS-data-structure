@@ -1,7 +1,7 @@
 /*
  * @Author: Stevie
  * @Date: 2021-06-14 23:10:50
- * @LastEditTime: 2021-07-08 17:23:20
+ * @LastEditTime: 2021-07-08 17:48:11
  * @LastEditors: Stevie
  * @Description: 
  */
@@ -14,7 +14,7 @@ const devConfig = {
   mode: 'development',
   devServer:{
     contentBase: path.resolve(__dirname,'../dist'),
-    port: 8000,
+    port: 7080,
     host: 'localhost',
     compress:false,
     open: true
