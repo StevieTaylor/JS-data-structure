@@ -1,13 +1,14 @@
 /*
  * @Author: Stevie
  * @Date: 2021-06-14 22:20:58
- * @LastEditTime: 2021-07-08 17:55:46
+ * @LastEditTime: 2021-07-09 11:14:36
  * @LastEditors: Stevie
  * @Description: 主入口文件
  */
 import './styles/index.css'
 import { chapterMap } from './utils/constant'
 import { title } from './utils/constant'
+import './chapter/index'
 
 const rootNode = document.getElementById('root')
 const titleNode = document.createElement('h1')
