@@ -1,7 +1,7 @@
 /*
  * @Author: Stevie
  * @Date: 2021-06-14 22:20:58
- * @LastEditTime: 2021-07-09 11:14:36
+ * @LastEditTime: 2021-07-17 18:09:15
  * @LastEditors: Stevie
  * @Description: 主入口文件
  */
@@ -9,6 +9,7 @@ import './styles/index.css'
 import { chapterMap } from './utils/constant'
 import { title } from './utils/constant'
 import './chapter/index'
+import { firstUpperCase } from './utils/index'
 
 const rootNode = document.getElementById('root')
 const titleNode = document.createElement('h1')
@@ -31,7 +32,7 @@ function loadChapter(chapterMap = {}) {
       subtitleNode.innerHTML = chapterMap[key].name
       container.appendChild(subtitleNode)
       const ulistNode = document.createElement('ul')
-      ulistNode.id = key
+      ulistNode.id = firstUpperCase(key)
       container.appendChild(ulistNode)
       rootNode.appendChild(container)
     }
