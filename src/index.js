@@ -1,14 +1,13 @@
 /*
  * @Author: Stevie
  * @Date: 2021-06-14 22:20:58
- * @LastEditTime: 2021-07-17 18:09:15
+ * @LastEditTime: 2021-07-19 14:32:02
  * @LastEditors: Stevie
  * @Description: 主入口文件
  */
 import './styles/index.css'
-import { chapterMap } from './utils/constant'
-import { title } from './utils/constant'
 import './chapter/index'
+import { chapterMap, title } from './utils/constant'
 import { firstUpperCase } from './utils/index'
 
 const rootNode = document.getElementById('root')
@@ -45,7 +44,8 @@ function loadChapter(chapterMap = {}) {
  * @param {*} chapterId
  * @return {*}
  */
-function loadModule(modules = {}, chapterId = '') {
+function loadModule(chapter = { modules: {}, chapterId: '' }) {
+  const { modules, chapterId } = chapter
   const chapterNode = document.getElementById(`${chapterId}`)
   for (const key in modules) {
     if (Object.hasOwnProperty.call(modules, key)) {
@@ -71,4 +71,5 @@ function loadModule(modules = {}, chapterId = '') {
   }
 }
 loadChapter(chapterMap)
-loadModule(chapterMap.stack.modules, chapterMap.stack.chapterId)
+loadModule(chapterMap.array)
+loadModule(chapterMap.stack)
