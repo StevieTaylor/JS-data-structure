@@ -1,16 +1,16 @@
 /*
  * @Author: Stevie
  * @Date: 2021-06-14 17:45:01
- * @LastEditTime: 2021-06-14 23:59:02
+ * @LastEditTime: 2021-07-20 13:05:30
  * @LastEditors: Stevie
  * @Description:
  */
-const path = require('path');
-const HappyPack = require('happypack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const srcPath = path.resolve(__dirname, './../src');
+const path = require('path')
+const HappyPack = require('happypack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const srcPath = path.resolve(__dirname, './../src')
 
 module.exports = {
   // - 入口
@@ -26,10 +26,8 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        options:{
-          presets:[
-            '@babel/preset-env'
-          ]
+        options: {
+          presets: ['@babel/preset-env'],
         },
         exclude: /node_modules/,
       },
@@ -38,13 +36,18 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
         exclude: /node_modules/,
       },
+      {
+        test: /\.md$/,
+        use: 'file-loader',
+        exclude: /node_modules/,
+      },
     ],
   },
   resolve: {
     extensions: ['.js', '.ts', '.css', '.json'],
     alias: {
-      src: srcPath
-    }
+      src: srcPath,
+    },
   },
   // - 插件
   plugins: [
@@ -60,6 +63,6 @@ module.exports = {
       template: `${srcPath}/template/index.html`,
       filename: 'index.html',
     }),
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin(),
   ],
-};
+}
