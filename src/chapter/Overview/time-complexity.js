@@ -1,9 +1,22 @@
 /*
  * @Author: Stevie
  * @Date: 2021-07-20 16:33:38
- * @LastEditTime: 2021-07-21 11:37:02
+ * @LastEditTime: 2021-07-24 18:26:28
  * @LastEditors: Stevie
  * @Description:
+ */
+/**
+ * - 通过对比程序运行时间可以得知, 时间复杂度从小到大依次是:
+ * -   常数阶 O(1)
+ * -   对数阶 O(logN)
+ * -   线性阶 O(n)
+ * -   线性对数阶 O(nlogN)
+ * -   平方阶 O(n^2)
+ * !   --- 分水岭, 后面的时间复杂度太高, 程序运行缓慢 ---
+ * -   立方阶 O(n^3)
+ * -   指数阶 O(2^n)
+ * -   阶乘阶 O(n!)
+ * -   n次方阶 O(n^n)
  */
 /**
  * @description: 常数阶, O(1)
@@ -12,7 +25,6 @@
  */
 function constant(n) {
   console.time('常数阶')
-  console.log('O(1)常数阶')
   console.timeEnd('常数阶')
 }
 
@@ -23,6 +35,7 @@ function constant(n) {
  */
 function logarithmic(n) {
   console.time('对数阶')
+  for (let i = 1; i <= n; i = i * 2) {}
   console.timeEnd('对数阶')
 }
 
@@ -33,12 +46,24 @@ function logarithmic(n) {
  */
 function linear(n) {
   console.time('线性阶')
-  let sum = 0
-  for (let i = 0; i <= n; i++) {
-    sum += i
-  }
-  console.log('sum:', sum)
+  for (let i = 0; i <= n; i++) {}
   console.timeEnd('线性阶')
+}
+
+/**
+ * @description: 线性对数阶, O(nlogN)
+ * @param {*} n
+ * @return {*}
+ */
+function linearLogarithmic(n) {
+  console.time('线性对数阶')
+  for (let i = 1; i <= n; i++) {
+    let j = 1
+    while (j < n) {
+      j = j * 2
+    }
+  }
+  console.timeEnd('线性对数阶')
 }
 
 /**
@@ -49,7 +74,7 @@ function linear(n) {
 function nSquare(n) {
   console.time('平方阶')
   for (let i = 0; i <= n; i++) {
-    for (let j = 0; j < n; j++) {}
+    for (let j = 0; j <= n; j++) {}
   }
   console.timeEnd('平方阶')
 }
@@ -76,23 +101,29 @@ function nCubic(n) {
  */
 function exponential(n) {
   console.time('指数阶')
-  for (let i = n; i >= 0; i = i / 2) {}
+  Fibonacci(n)
   console.timeEnd('指数阶')
 }
 
 /**
- * @description: 阶乘阶, O(n!)
+ * @description: 斐波那契数列递归
  * @param {*} n
  * @return {*}
  */
-function factorial(n) {
-  console.time('阶乘阶')
-  for (let i = 0; i <= n; i++) {
-    for (let j = 0; j < i; j++) {}
+function Fibonacci(n) {
+  if (n <= 1) {
+    return n
   }
-  console.timeEnd('阶乘阶')
+  return Fibonacci(n - 1) + Fibonacci(n - 2)
 }
 
-constant(10000)
-linear(10000)
-nSquare(10000)
+const INPUTSIZE = 10000
+constant(INPUTSIZE)
+logarithmic(INPUTSIZE)
+linear(INPUTSIZE)
+linearLogarithmic(INPUTSIZE)
+nSquare(INPUTSIZE)
+
+const SMALLINPUTSIZE = 30
+nCubic(SMALLINPUTSIZE)
+exponential(SMALLINPUTSIZE)
