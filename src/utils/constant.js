@@ -1,7 +1,7 @@
 /*
  * @Author: Stevie
  * @Date: 2021-06-15 15:11:56
- * @LastEditTime: 2021-07-20 22:40:11
+ * @LastEditTime: 2021-07-24 19:22:42
  * @LastEditors: Stevie
  * @Description: 章节和模块配置
  */
@@ -20,7 +20,7 @@ export const chapterMap = {
   },
   array: {
     chapterId: 'Array',
-    name: '一、数组',
+    name: '二、数组',
     modules: {
       array: '数组',
     },
@@ -28,7 +28,7 @@ export const chapterMap = {
   },
   stack: {
     chapterId: 'Stack',
-    name: '二、栈',
+    name: '三、栈',
     modules: {
       implement: '栈的实现',
       useStack: '栈的使用',
