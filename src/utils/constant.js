@@ -1,7 +1,7 @@
 /*
  * @Author: Stevie
  * @Date: 2021-06-15 15:11:56
- * @LastEditTime: 2021-07-24 19:22:42
+ * @LastEditTime: 2021-07-28 14:35:18
  * @LastEditors: Stevie
  * @Description: 章节和模块配置
  */
@@ -23,6 +23,7 @@ export const chapterMap = {
     name: '二、数组',
     modules: {
       array: '数组',
+      useArray: '数组的使用',
     },
     display: true,
   },
