@@ -1,7 +1,7 @@
 /*
  * @Author: Stevie
  * @Date: 2021-06-15 15:11:56
- * @LastEditTime: 2021-07-29 11:01:27
+ * @LastEditTime: 2021-12-27 17:39:17
  * @LastEditors: Stevie
  * @Description: 章节和模块配置
  */
@@ -40,8 +40,7 @@ export const chapterMap = {
     chapterId: 'Stack',
     name: '四、栈',
     modules: {
-      implement: '栈的实现',
-      useStack: '栈的使用',
+      stack: '栈的实现',
     },
     display: true,
   },
