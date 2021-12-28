@@ -1,7 +1,7 @@
 /*
  * @Author: Stevie
  * @Date: 2021-12-28 15:45:48
- * @LastEditTime: 2021-12-28 16:30:18
+ * @LastEditTime: 2021-12-28 16:32:52
  * @LastEditors: Stevie
  * @Description:
  */
@@ -41,19 +41,19 @@ describe('Queue', () => {
     expect(queue.elements).toEqual([2, 3])
   })
 
-  it('should support front', () => {
-    queue.enqueue(1)
-    queue.enqueue(2)
-    queue.enqueue(3)
-    expect(queue.front).toBe(1)
-  })
-
   it('should support clear', () => {
     queue.enqueue(1)
     queue.enqueue(2)
     queue.enqueue(3)
     queue.clear()
     expect(queue.elements).toEqual([])
+  })
+
+  it('should support front', () => {
+    queue.enqueue(1)
+    queue.enqueue(2)
+    queue.enqueue(3)
+    expect(queue.front).toBe(1)
   })
 
   it('should support size', () => {

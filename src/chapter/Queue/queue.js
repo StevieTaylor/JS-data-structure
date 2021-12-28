@@ -1,7 +1,7 @@
 /*
  * @Author: Stevie
  * @Date: 2021-12-27 17:42:34
- * @LastEditTime: 2021-12-28 16:23:18
+ * @LastEditTime: 2021-12-28 16:32:26
  * @LastEditors: Stevie
  * @Description:
  */
@@ -20,7 +20,7 @@ export default class Queue {
     if (this.isEmpty) {
       return
     }
-    this.elements.shift()
+    return this.elements.shift()
   }
 
   // * 清空队列
