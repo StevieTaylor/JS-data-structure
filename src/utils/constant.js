@@ -1,7 +1,7 @@
 /*
  * @Author: Stevie
  * @Date: 2021-06-15 15:11:56
- * @LastEditTime: 2021-12-27 17:39:17
+ * @LastEditTime: 2021-12-29 15:43:19
  * @LastEditors: Stevie
  * @Description: 章节和模块配置
  */
@@ -41,6 +41,15 @@ export const chapterMap = {
     name: '四、栈',
     modules: {
       stack: '栈的实现',
+    },
+    display: true,
+  },
+  queue: {
+    chapterId: 'Queue',
+    name: '五、队列',
+    modules: {
+      queue: '队列',
+      circularQueue: '循环队列',
     },
     display: true,
   },
