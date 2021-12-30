@@ -1,7 +1,7 @@
 /*
  * @Author: Stevie
  * @Date: 2021-06-15 15:11:56
- * @LastEditTime: 2021-12-29 15:43:19
+ * @LastEditTime: 2021-12-30 16:26:50
  * @LastEditors: Stevie
  * @Description: 章节和模块配置
  */
@@ -50,6 +50,14 @@ export const chapterMap = {
     modules: {
       queue: '队列',
       circularQueue: '循环队列',
+    },
+    display: true,
+  },
+  binaryTree: {
+    chapterId: 'BinaryTree',
+    name: '六、二叉树',
+    modules: {
+      preorderTraversal: '前序遍历',
     },
     display: true,
   },
